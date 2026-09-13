@@ -1702,7 +1702,6 @@
 	if(!get_detail_tag())
 		return
 	var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
-	message_admins("[pic.icon_state]")
 	pic.appearance_flags = RESET_COLOR
 	if(get_detail_color())
 		pic.color = get_detail_color()
