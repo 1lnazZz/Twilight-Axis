@@ -5028,13 +5028,6 @@ GLOBAL_LIST_EMPTY(loadout_items_by_category)
 	donatitem = TRUE
 	donat_tier = 3
 
-/datum/loadout_item/donator/universal/headpiece_oathkeeperdeclone
-	name = "Donator Item - Oathtaker's Decoration, Standalone"
-	category = list("Головные уборы", "Донат")
-	path = /obj/item/clothing/head/roguetown/decoration/orle/donator_oathkeeper/crest
-	donatitem = TRUE
-	donat_tier = 2
-
 /datum/loadout_item/donator/universal/greatcoat
 	name = "Donator Item - Greatcoat"
 	category = list("Плащи", "Донат")
