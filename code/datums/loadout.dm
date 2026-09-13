@@ -5167,3 +5167,16 @@ GLOBAL_LIST_EMPTY(loadout_items_by_category)
 	category = list("Аксессуары", "Донат")
 	path = /obj/item/clothing/neck/roguetown/psicross/liefdonator
 	donatitem = TRUE
+
+/datum/loadout_item/donator/rezathedwarf
+	name = "Donator Item - Glimmering Cloak (Only Male, No Small Races)"
+	category = list("Плащи", "Донат")
+	path = /obj/item/clothing/cloak/half/donator_rezathedwarf
+	donatitem = TRUE
+
+/datum/loadout_item/donator/rezathedwarf/blade
+	name = "Donator Kit - The Enclave Blade - Required: Sabre"
+	path = /obj/item/enchantingkit/weapon/donator_rezathedwarf_blade
+	category = list("Оружие", "Донат")
+	donatitem = TRUE
+	donat_tier = 2
