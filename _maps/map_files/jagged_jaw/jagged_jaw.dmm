@@ -1849,6 +1849,10 @@
 	},
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/mountains/decap/stepbelow)
+"amp" = (
+/obj/structure/flora/roguegrass,
+/turf/open/floor/rogue/grass,
+/area/rogue/druidsgrove/grim)
 "amq" = (
 /obj/item/flashlight/flare/torch,
 /turf/open/floor/rogue/naturalstone,
@@ -6012,6 +6016,7 @@
 /obj/item/reagent_containers/food/snacks/rogue/egg,
 /obj/item/reagent_containers/food/snacks/rogue/egg,
 /obj/item/reagent_containers/food/snacks/butter,
+/obj/item/reagent_containers/food/snacks/rogue/meat/steak,
 /turf/open/floor/rogue/tile/brownbrick/browner,
 /area/rogue/druidsgrove/grim/tree)
 "aLG" = (
@@ -21962,6 +21967,9 @@
 	},
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/bog/north/grim/ne)
+"cJa" = (
+/turf/open/floor/rogue/grassred,
+/area/rogue/druidsgrove/grim)
 "cJb" = (
 /obj/structure/table/finestone,
 /obj/effect/spawner/lootdrop/valuable_candle_spawner,
@@ -36770,6 +36778,15 @@
 	},
 /turf/open/floor/carpet/inn,
 /area/rogue/indoors/town/grim)
+"exP" = (
+/obj/structure/chair/bench/church/smallbench{
+	dir = 8;
+	name = "Steering Base";
+	pixel_x = 2;
+	pixel_y = 3
+	},
+/turf/open/floor/rogue/grasscold,
+/area/rogue/druidsgrove/grim)
 "exQ" = (
 /turf/closed/wall/mineral/rogue/decowood,
 /area/rogue/indoors/abandonedhotsprings/grim)
@@ -72873,12 +72890,14 @@
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/indoors/shelter)
 "iTj" = (
-/obj/effect/wisp/prestidigitation{
-	desc = "A small, fiery ball of light made up of mystical energy.";
-	name = "Will-o'-the-wisp";
-	pixel_x = 0
-	},
-/turf/open/floor/rogue/naturalstone,
+/obj/structure/closet/crate/chest,
+/obj/item/reagent_containers/food/snacks/rogue/meat/steak,
+/obj/item/reagent_containers/food/snacks/rogue/meat/steak,
+/obj/item/reagent_containers/food/snacks/rogue/meat/steak,
+/obj/item/grown/log/tree/stake,
+/obj/item/grown/log/tree/stake,
+/obj/item/grown/log/tree/stake,
+/turf/open/floor/rogue/grasscold,
 /area/rogue/druidsgrove/grim)
 "iTk" = (
 /obj/structure/fluff/railing/border,
@@ -80830,6 +80849,14 @@
 	},
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors/town/church/basement/grim)
+"jRo" = (
+/obj/structure/chair/bench/church/smallbench{
+	dir = 8;
+	name = "Steering Base";
+	pixel_x = -13
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/druidsgrove/grim)
 "jRp" = (
 /obj/structure/table/wood/poor,
 /obj/structure/closet/crate/chest/neu{
@@ -89198,6 +89225,15 @@
 	},
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave/his_vault/four)
+"kTr" = (
+/obj/structure/chair/bench/church/smallbench{
+	dir = 8;
+	name = "Steering Base";
+	pixel_x = 2;
+	pixel_y = 3
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/druidsgrove/grim)
 "kTt" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
@@ -93242,6 +93278,14 @@
 	},
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/grim)
+"ltk" = (
+/obj/structure/chair/bench/church/smallbench{
+	dir = 8;
+	name = "Steering Base";
+	pixel_x = -13
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/druidsgrove/grim)
 "ltn" = (
 /obj/structure/rack/rogue/shelf/big{
 	icon_state = "shelf_biggest";
@@ -107009,6 +107053,10 @@
 /obj/effect/spawner/lootdrop/cheap_candle_spawner,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/under/cave/grimspyre)
+"ndJ" = (
+/obj/structure/chair/bench/church/smallbench,
+/turf/open/floor/rogue/grass,
+/area/rogue/druidsgrove/grim)
 "ndN" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/far_travel,
@@ -107983,6 +108031,10 @@
 /obj/effect/spawner/trap,
 /turf/open/water/swamp,
 /area/rogue/under/cavewet/bogcaves/west)
+"nkp" = (
+/obj/structure/flora/roguegrass/herb/random,
+/turf/open/floor/rogue/dirt,
+/area/rogue/druidsgrove/grim)
 "nkr" = (
 /obj/effect/decal/carpet{
 	dir = 1;
@@ -153266,6 +153318,14 @@
 /obj/item/rope/chain,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/cave/his_vault)
+"sJL" = (
+/obj/machinery/light/rogue/campfire/densefire{
+	fueluse = 108000;
+	pixel_x = 1;
+	pixel_y = 3
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/druidsgrove/grim)
 "sJO" = (
 /turf/closed/wall/mineral/rogue/roofwall/center,
 /area/rogue/outdoors/woods/grim/northeast)
@@ -160108,6 +160168,14 @@
 	},
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/outdoors/beach/grim)
+"tBv" = (
+/obj/structure/chair/bench/church/smallbench{
+	dir = 1;
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/druidsgrove/grim)
 "tBw" = (
 /obj/structure/fluff/sign{
 	name = "FOR SALE AND RENOVATION";
@@ -178374,6 +178442,14 @@
 /obj/machinery/light/rogue/torchholder/l,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/town/garrison/grim)
+"vIc" = (
+/obj/structure/chair/bench/church/smallbench{
+	dir = 1;
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/turf/open/floor/rogue/grassred,
+/area/rogue/druidsgrove/grim)
 "vIh" = (
 /obj/effect/decal/cleanable/blood,
 /mob/living/carbon/human/species/skeleton/npc/medium,
@@ -198358,6 +198434,10 @@
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors)
+"ycl" = (
+/obj/structure/chair/bench/church/smallbench,
+/turf/open/floor/rogue/grasscold,
+/area/rogue/druidsgrove/grim)
 "ycn" = (
 /obj/effect/decal/edge_corner{
 	color = "#3f3f3f";
@@ -328392,7 +328472,7 @@ qeP
 ydn
 qeP
 ydn
-ydn
+xGo
 vxB
 lKz
 wmi
@@ -328767,7 +328847,7 @@ ydn
 ydn
 sJQ
 rFP
-mty
+ciu
 mty
 bYu
 edq
@@ -329548,7 +329628,7 @@ vxB
 lKz
 lKz
 ydn
-ydn
+xGo
 bJL
 jke
 jke
@@ -330711,7 +330791,7 @@ ydn
 vxB
 lKz
 vxB
-ydn
+xGo
 ydn
 bYu
 jke
@@ -331841,7 +331921,7 @@ bCa
 vxB
 ydn
 ydn
-ydn
+xGo
 lKz
 lKz
 bkX
@@ -332587,7 +332667,7 @@ jQH
 jQH
 bYu
 vWB
-mty
+ciu
 lKz
 vxB
 mty
@@ -333790,7 +333870,7 @@ ycG
 ycG
 ycG
 uXL
-isn
+iMQ
 iYq
 cHN
 isn
@@ -334884,7 +334964,7 @@ lKz
 lKz
 lKz
 vxB
-mty
+ciu
 ydn
 geW
 ydn
@@ -335655,7 +335735,7 @@ qeP
 ydn
 mty
 mty
-ydn
+xGo
 ydn
 lKz
 lKz
@@ -336058,7 +336138,7 @@ ydn
 bJL
 wmi
 bJL
-ydn
+xGo
 ydn
 qeP
 ydn
@@ -336410,7 +336490,7 @@ mty
 ret
 cdN
 ydn
-bYu
+nkp
 lKz
 lKz
 fyn
@@ -337941,7 +338021,7 @@ aGH
 fVB
 axt
 ydn
-ydn
+xGo
 lKz
 lKz
 vxB
@@ -337970,7 +338050,7 @@ ljl
 ljl
 ydn
 bYu
-ydn
+xGo
 xvv
 ydn
 ydn
@@ -340644,7 +340724,7 @@ ljl
 ydn
 ydn
 ydn
-ydn
+xGo
 xvv
 ydn
 ydn
@@ -341789,7 +341869,7 @@ ljl
 ydn
 oiz
 ydn
-bYu
+nkp
 ydn
 ydn
 ydn
@@ -455619,8 +455699,8 @@ qeP
 qeP
 qeP
 qeP
-ydn
-ydn
+qeP
+qeP
 qeP
 qeP
 qeP
@@ -456001,15 +456081,15 @@ lhS
 ydn
 xvv
 ydn
-ydn
-bYu
+lhS
+geW
 bYu
 bYu
 geW
 geW
 qeP
-mty
-ydn
+qeP
+qeP
 qeP
 mty
 mty
@@ -456376,20 +456456,20 @@ geW
 xvv
 xvv
 qeP
-ydn
+qeP
 qeP
 ydn
-ydn
+bYu
 xvv
 xvv
-ydn
-pkI
+mty
+tRy
 geW
-bYu
-jOp
-jOp
-bYu
+geW
+hos
 ydn
+bYu
+lhS
 ydn
 qeP
 qeP
@@ -456760,22 +456840,22 @@ aST
 ydn
 qeP
 ydn
-ydn
-jOp
-jOp
-jOp
-ydn
-ydn
+mty
+geW
+mty
+geW
+uWi
 bYu
-jOp
-jOp
-jOp
+mty
+mty
 bYu
+vWB
+mty
 geW
 bYu
-ydn
+ivz
 qeP
-ydn
+qeP
 qeP
 ydn
 sne
@@ -457140,19 +457220,19 @@ oiz
 bYu
 qeP
 qeP
-ydn
+qeP
 xvv
-jOp
-jOp
-ljl
-jOp
-jOp
+geW
+vWB
+hos
 bYu
-jOp
-jOp
-jOp
-jOp
-bYu
+ydn
+geW
+aST
+geW
+geW
+pkI
+mty
 bYu
 geW
 xvv
@@ -457523,25 +457603,25 @@ qeP
 qeP
 qeP
 qeP
-jOp
-jOp
-ljl
-ljl
-ljl
-iTj
-jOp
-jOp
-jOp
-ljl
+bYu
+bYu
+lhS
+mty
+geW
+sMq
+mty
+vWB
 jOp
 jOp
 bYu
+geW
+ydn
 bYu
 mty
 sne
 oiz
 qeP
-bYu
+qeP
 qeP
 xvv
 mty
@@ -457899,26 +457979,26 @@ sne
 mty
 ydn
 xvv
-ydn
 qeP
-ydn
+qeP
+pyk
 xvv
 qeP
 qeP
 qeP
+ydn
+bYu
+geW
+bYu
+ydn
+bYu
 jOp
 ljl
 ljl
-ljl
-ljl
 jOp
-jOp
-ljl
-ljl
-jOp
-jOp
-jOp
-jOp
+ydn
+ydn
+uWi
 bYu
 sne
 ydn
@@ -458279,30 +458359,30 @@ ydn
 hos
 sne
 bpi
-ydn
-qeP
-ydn
-ydn
-ydn
-jOp
 qeP
 qeP
+qeP
+ydn
+mty
+ydn
+qeP
+qeP
 jOp
-jOp
-ljl
-ljl
-ljl
-ljl
-ljl
-ljl
-ljl
-ljl
-jOp
-iTj
 jOp
 jOp
 bYu
+mty
 bYu
+jOp
+ljl
+ljl
+ljl
+jOp
+sMq
+geW
+bYu
+ydn
+ydn
 hzH
 bYu
 qeP
@@ -458664,29 +458744,29 @@ qeP
 qeP
 ydn
 xvv
-jOp
-jOp
-jOp
+bYu
+ivz
+bYu
 ygv
 fyn
 ygv
 ljl
 ljl
-ljl
-ljl
-ljl
+jOp
+geW
+jOp
 ljl
 ljl
 ljl
 ljl
 ljl
 jOp
-jOp
-jOp
-jOp
-jOp
-jOp
-jOp
+geW
+geW
+bYu
+hos
+mty
+lhS
 qeP
 enX
 bYu
@@ -459040,12 +459120,12 @@ xvv
 mty
 ydn
 qeP
+qeP
+qeP
+qeP
+ydn
 mty
-qeP
-qeP
-ydn
-ydn
-jOp
+mty
 jOp
 jOp
 jOp
@@ -459055,20 +459135,20 @@ kje
 ljl
 ljl
 ljl
-ljl
-ljl
-ljl
-ljl
-ljl
-ljl
-ljl
-ljl
 jOp
-jOp
-jOp
+ljl
+ljl
+ljl
+ljl
+ljl
+ljl
+ljl
 jOp
 bYu
-bYu
+pyk
+ydn
+pkI
+mty
 qeP
 bYu
 ydn
@@ -459420,13 +459500,13 @@ vWB
 oEg
 lhS
 mty
-ydn
+qeP
 qeP
 ydn
-ydn
+mty
 ydn
 lhS
-jOp
+mty
 jOp
 ljl
 ljl
@@ -459446,9 +459526,9 @@ ljl
 ljl
 ljl
 jOp
-jOp
-jOp
-bYu
+mty
+mty
+tRy
 geW
 ydn
 qeP
@@ -459827,7 +459907,7 @@ ljl
 ljl
 ljl
 jOp
-jOp
+bYu
 bYu
 geW
 geW
@@ -460184,7 +460264,7 @@ aST
 nOf
 xvv
 qeP
-ydn
+qeP
 qeP
 rBq
 lhS
@@ -460209,10 +460289,10 @@ ljl
 ljl
 ljl
 jOp
-jOp
-jOp
+geW
+mty
 bYu
-ydn
+pyk
 xvv
 qeP
 qeP
@@ -460591,9 +460671,9 @@ ljl
 ljl
 ljl
 ljl
-jOp
-jOp
-bYu
+geW
+mty
+geW
 sne
 ydn
 qeP
@@ -460947,7 +461027,7 @@ qeP
 ydn
 oEg
 qeP
-ydn
+qeP
 qeP
 ydn
 ljl
@@ -460973,8 +461053,8 @@ ljl
 ljl
 ljl
 jOp
-jOp
-jOp
+bYu
+ydn
 bYu
 geW
 nOf
@@ -461355,8 +461435,8 @@ ljl
 ljl
 ljl
 jOp
-jOp
-jOp
+ydn
+bYu
 bYu
 xvv
 qeP
@@ -461738,7 +461818,7 @@ ljl
 ljl
 ljl
 jOp
-bYu
+geW
 qeP
 qeP
 qeP
@@ -462119,7 +462199,7 @@ ljl
 ljl
 ljl
 jOp
-jOp
+geW
 bYu
 qeP
 sne
@@ -462501,7 +462581,7 @@ ljl
 ljl
 ljl
 jOp
-jOp
+bYu
 qeP
 qeP
 bYu
@@ -462883,13 +462963,13 @@ ljl
 ljl
 ljl
 jOp
-jOp
+ydn
 qeP
 jOp
 bYu
 bYu
 ksg
-ydn
+qeP
 ydn
 ydn
 mty
@@ -463263,8 +463343,8 @@ gZw
 aLO
 ygv
 jOp
-jOp
-jOp
+ydn
+ydn
 qeP
 qeP
 bYu
@@ -464026,7 +464106,7 @@ mDE
 mDE
 mDE
 ygv
-jOp
+ydn
 qeP
 qeP
 qeP
@@ -464409,7 +464489,7 @@ ljl
 ljl
 ljl
 jOp
-jOp
+ydn
 qeP
 qeP
 sne
@@ -464792,7 +464872,7 @@ ljl
 ljl
 ljl
 jOp
-jOp
+bYu
 qeP
 qeP
 xvv
@@ -465175,7 +465255,7 @@ ljl
 ljl
 ljl
 jOp
-jOp
+bYu
 qeP
 ivz
 ydn
@@ -465556,11 +465636,11 @@ ljl
 jOp
 jOp
 jOp
-jOp
+bYu
 bYu
 qeP
 qeP
-bYu
+qeP
 qeP
 pkI
 ydn
@@ -465936,8 +466016,8 @@ ljl
 ljl
 ljl
 jOp
-jOp
-jOp
+bYu
+bYu
 bYu
 bYu
 bYu
@@ -466317,8 +466397,8 @@ ljl
 ljl
 ljl
 jOp
-jOp
-jOp
+bYu
+bYu
 bYu
 sne
 vRQ
@@ -466699,14 +466779,14 @@ ljl
 ljl
 ljl
 jOp
-jOp
+bYu
 mty
 mty
 sne
 mty
 pyk
-ydn
-ydn
+qeP
+qeP
 vRQ
 dJS
 pyk
@@ -467087,7 +467167,7 @@ ydn
 xvv
 pyk
 qeP
-oiz
+vEk
 lhS
 ydn
 sne
@@ -468608,11 +468688,11 @@ qeP
 qeP
 qeP
 qeP
-ydn
 qeP
 qeP
-mty
-ydn
+qeP
+qeP
+qeP
 nEg
 dAz
 vRQ
@@ -468977,7 +469057,7 @@ mty
 uxT
 qeP
 qeP
-mty
+qeP
 qeP
 qeP
 qeP
@@ -468993,7 +469073,7 @@ qsC
 pyk
 oiz
 ydn
-ydn
+qeP
 xvv
 mty
 pkI
@@ -469375,10 +469455,10 @@ vRQ
 bYu
 sne
 oEg
-ydn
+qeP
 bYu
 geW
-mty
+ydn
 mty
 bYu
 vRQ
@@ -469755,11 +469835,11 @@ nEg
 qeP
 hos
 pyk
-mty
-sne
-pkI
-aVr
-bYu
+ydn
+ltk
+jRo
+ltk
+uWi
 sne
 xGo
 qsC
@@ -470137,11 +470217,11 @@ mty
 qeP
 sne
 ibC
-vRQ
-ivz
-qsC
-bYu
-oEg
+ndJ
+ydn
+mty
+qeP
+tBv
 mty
 bYu
 sne
@@ -470519,11 +470599,11 @@ ydn
 qeP
 sne
 ibC
-ibC
-oEg
-xvv
-pkI
-mty
+ndJ
+qeP
+sJL
+cJa
+tBv
 mty
 buO
 sne
@@ -470900,12 +470980,12 @@ mty
 qeP
 qeP
 ydn
-tRy
+qeP
+ycl
 mty
-bYu
-geW
-bYu
-bYu
+qeP
+qeP
+vIc
 mty
 ibC
 rBq
@@ -471281,13 +471361,13 @@ pkI
 ydn
 qeP
 qeP
-mty
+ibC
 vRQ
-aVr
-bYu
-bYu
-bYu
-uol
+qeP
+exP
+kTr
+kTr
+iTj
 tRy
 bYu
 bYu
@@ -471662,13 +471742,13 @@ oEg
 mty
 qeP
 qeP
-mty
+amp
 nOf
 mBe
-mty
+qeP
 bYu
-bYu
-vQo
+ydn
+ydn
 mty
 geW
 bYu
@@ -472046,11 +472126,11 @@ qeP
 qeP
 sne
 sne
-ydn
-rBq
+qeP
+qeP
 uWi
 bYu
-bYu
+vQo
 pkI
 bYu
 oEg
