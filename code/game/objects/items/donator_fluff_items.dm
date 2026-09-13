@@ -4219,7 +4219,7 @@ As Excaliber."
 // REZATHEDWARF
 
 /obj/item/clothing/cloak/half/donator_rezathedwarf
-	name = "Noah's Glimmering Cloak"
+	name = "Glimmering Cloak"
 	desc = "Cloak from the infamous Redcloaks, said to have dyed their cloaks in the blood of their first kills. Even now, it pulses \
 	and brightens with magical energy of wild color, perhaps of the dead souls that are rumored to be within it. If the old stories \
 	are true, anyone who wears this is sure to go insane."

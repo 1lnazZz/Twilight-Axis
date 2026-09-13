@@ -170,10 +170,6 @@
 /mob/living/proc/get_emote_pitch()
 	return clamp(voice_pitch, 0.5, 2)
 
-/datum/emote/proc/get_env(mob/living/user)
-	return
-
-
 
 
 /datum/emote/living/get_env(mob/living/user)
