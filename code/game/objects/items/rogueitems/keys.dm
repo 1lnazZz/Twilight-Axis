@@ -175,6 +175,11 @@
 	icon_state = "mazekey"
 	lockid = "manor"
 
+/obj/item/roguekey/noblegate
+	name = "gate key"
+	icon_state = "brownkey"
+	lockid = "noblehome1gate"
+
 /obj/item/roguekey/heir
 	name = "heir room key"
 	desc = "A highly coveted key belonging to the doors of the heirs of this realm."
@@ -958,6 +963,12 @@
 	desc = "A strange mossy key."
 	icon_state = "mosskey"
 	lockid = "hag"
+
+/obj/item/roguekey/fort
+	name = "fort key"
+	desc = "The key to the fort, caked in a layer of rust from a time long left unused."
+	icon_state = "rustkey"
+	lockid = "skellydungeon1"
 
 //Zurch
 
