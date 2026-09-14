@@ -447,6 +447,13 @@ Inquisitorial armory down here
 		for(var/mob/living/carbon/human/H in range(1, get_turf(src)))
 			H.gib()*/ //TA EDIT
 	if(isitem(A) && on && user.used_intent.type == /datum/intent/bless)
+		// hey guys its me again profane dagger bc i cant figure out a better way to do this!! ANOTHER SMARTER DEV PLS REPLACE THIS SNOWFLAKE SHIT
+		if(istype(A, /obj/item/rogueweapon/huntingknife/idagger/steel/profane))
+			if(user.mind?.assigned_role == "Absolver")
+				destroy_that_dagger(user, A)
+				return
+			else
+				to_chat(user, span_warning("Only an ABSOLVER can use Golgatha to free the souls within this dagger!"))
 		var/datum/component/silverbless/CP = A.GetComponent(/datum/component/silverbless)
 		if(CP)
 			if(!CP.is_blessed && (CP.silver_type & SILVER_PSYDONIAN))
@@ -482,6 +489,35 @@ Inquisitorial armory down here
 				new /obj/effect/temp_visual/censer_dust(get_turf(H))
 		else
 			to_chat(user, span_warning("They've already been blessed."))
+
+/obj/item/flashlight/flare/torch/lantern/psycenser/proc/destroy_that_dagger(mob/user, obj/item/target)
+	var/obj/item/rogueweapon/huntingknife/idagger/steel/profane/pissdagger = target
+	// assassin must be dead
+	if(!pissdagger.is_my_owner_dead())
+		to_chat(user, span_warning("I hear weeping from within the dagger. The assassin is not yet dead... their foul magicks still \
+		protect this dagger!"))
+		return
+	// im so fucking sorry for the if chain. conceptually we're invoking ravox & necra verus graggar in a tiny battle.
+	user.visible_message(span_warning("[user] begins reciting a prayer over [pissdagger]..."), span_info("I begin to recite a prayer over [pissdagger]... this will take some time."))
+	playsound(user, 'sound/magic/psyabsolution.ogg', 100)
+	if(do_after(user, 15 SECONDS))
+		user.say("PSY 60:5... With the wave of a hand, HE could turn back the tide of darkness, and impart upon the land peace and justice!")
+		playsound(user, 'sound/magic/ENDVRE.ogg', 100)
+		if(do_after(user, 10 SECONDS))
+			user.say("PSY 80:2... The fighting stopped as they all watched the heavens; HE had struck the DOOMSTAR alone and with it, swallowed the lands in an immense light.")
+			pissdagger.say(span_gamedeadsay("WE SEE YOUR LIGHT! PLEASE! FREE US!"))
+			playsound(user, 'sound/magic/psydonrespite.ogg', 100)
+			if(do_after(user, 10 SECONDS))
+				user.say("PSY 9:4... Lo, HIS tears healed even the deepest of wounds; the droplets would spur LYFE wherever they fell!")
+				pissdagger.say(span_artery("...why am I... so tired? Maaaasteeer?"))
+				playsound(user, 'sound/magic/ENDVRE.ogg', 100)
+				if(do_after(user, 10 SECONDS))
+					user.say("PSY 1:30... HE is our shepherd, and cradles those who’ve passed while waiting for the salvation of our kind; HE holds them with loving arms!")
+					pissdagger.say(span_artery("Master... I don't want to go to sleep...!"))
+					playsound(user, 'sound/magic/psyabsolution.ogg', 100)
+					if(do_after(user, 3 SECONDS))
+						pissdagger.release_profane_souls(user)
+						pissdagger.shatter_dagger()
 
 /mob/living/carbon/human/proc/has_active_golgatha()
 	for(var/obj/item/flashlight/flare/torch/lantern/psycenser/G in contents)
@@ -978,7 +1014,7 @@ Inquisitorial armory down here
 			if("onbelt")
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
-/*		//TA-EDITSTART
+		//TA-EDITSTART
 /obj/item/inqarticles/garrote // Do not give this item out freely to other classes. Do not subtype this item for other classes. This is intended purely as the Confessor's identifying sidegrade, and as a bonus for the Inspector INQ. I will be very sad if you disregard this comment. Thank you. - Yische.
 	name = "\proper seizing garrote" // It's nonlethal. It's so silly and fun.
 	desc = "A macabre instrument favored by the more clandestine of the Psydonian Silver Order; A length of thick leather inquiry cordage that has been dipped in both holy water and dye before being consecrated and spell-laced, held and threaded between two iron links. Perfect for apprehension."
@@ -1075,6 +1111,25 @@ Inquisitorial armory down here
 		active = FALSE
 		playsound(loc, 'sound/items/garroteshut.ogg', 65, TRUE)
 
+/obj/item/inqarticles/garrote/proc/has_oxy_protection(obj/item/I) //TA EDIT START
+	if(!I || I.obj_broken)
+		return FALSE
+	return istype(I, /obj/item/clothing/neck/roguetown/gorget) || istype(I, /obj/item/clothing/neck/roguetown/leather) || istype(I, /obj/item/clothing/neck/roguetown/bevor) || istype(I, /obj/item/clothing/neck/roguetown/coif) || istype(I, /obj/item/clothing/neck/roguetown/chaincoif)
+
+/obj/item/inqarticles/garrote/proc/log_garrote_grab(mob/living/user, mob/living/target)
+	if(!user || !target)
+		return
+	log_attack("[key_name(user)] wrapped [src] around [key_name(target)]'s throat at [AREACOORD(user)].")
+	user.log_message("wrapped [src] around [key_name(target)]'s throat.", LOG_ATTACK, color = "red")
+	target.log_message("had [src] wrapped around their throat by [key_name(user)].", LOG_ATTACK, color = "orange")
+
+/obj/item/inqarticles/garrote/proc/log_garrote_choke(mob/living/user, mob/living/target, oxy_damage)
+	if(!user || !target)
+		return
+	log_attack("[key_name(user)] choked [key_name(target)] with [src] for [oxy_damage] oxygen damage at [AREACOORD(user)].")
+	user.log_message("choked [key_name(target)] with [src] for [oxy_damage] oxygen damage.", LOG_ATTACK, color = "red")
+	target.log_message("was choked by [key_name(user)] with [src] for [oxy_damage] oxygen damage.", LOG_ATTACK, color = "orange") //TA EDIT END
+
 /obj/item/inqarticles/garrote/attack_self(mob/user)
 	if(obj_broken)
 		to_chat(user, span_warning("It's useless now, although.."))
@@ -1126,7 +1181,7 @@ Inquisitorial armory down here
 	. = ..()
 	if(istype(I, /obj/item/rope/inqarticles/inquirycord))
 		user.visible_message(span_warning("[user] starts to rethread the [src] using the [I]."))
-		if(do_after(user, 8 SECONDS))
+		if(do_after(user, 8 SECONDS, TRUE, src))
 			qdel(I)
 			obj_broken = FALSE
 			obj_integrity = max_integrity
@@ -1155,6 +1210,9 @@ Inquisitorial armory down here
 		if(user.zone_selected != "neck")
 			to_chat(user, span_warning("I need to wrap it around their throat."))
 			return
+		if(target.can_see_cone(user) && target.stat == CONSCIOUS) //TA EDIT START
+			to_chat(user, span_warning("They looking right at me. This isn't going to work."))
+			return //TA EDIT END
 		if(HAS_TRAIT(target, TRAIT_GARROTED))
 			to_chat(user, span_warning("They already have one wrapped around their throat."))
 			return
@@ -1167,6 +1225,7 @@ Inquisitorial armory down here
 		if(target != user)
 			user.start_pulling(target, state = 1, supress_message = TRUE, item_override = src)
 		user.visible_message(span_danger("[user] wraps the [src] around [target]'s throat!"))
+		log_garrote_grab(user, target) //TA EDIT
 		user.stamina_add(25)
 		user.changeNext_move(CLICK_CD_MELEE)
 		REMOVE_TRAIT(user, TRAIT_NOSTRUGGLE, TRAIT_GENERIC)
@@ -1190,15 +1249,25 @@ Inquisitorial armory down here
 		// if(get_location_accessible(C, BODY_ZONE_PRECISE_NECK))
 		playsound(loc, pick('sound/items/garrotechoke1.ogg', 'sound/items/garrotechoke2.ogg', 'sound/items/garrotechoke3.ogg', 'sound/items/garrotechoke4.ogg', 'sound/items/garrotechoke5.ogg'), 100, TRUE)
 		if(prob(40))
-			C.emote("choke")
-		C.adjustOxyLoss(choke_damage)
+			C.emote("choke") //TA EDIT START
+		var/oxy_damage = 20
+		if(C.InCritical())
+			oxy_damage = choke_damage
+		else if(ishuman(C))
+			var/mob/living/carbon/human/H = C
+			if(has_oxy_protection(H.wear_neck) || has_oxy_protection(H.head))
+				oxy_damage = choke_damage
+		var/total_oxy_damage = oxy_damage
+		C.adjustOxyLoss(oxy_damage)
 		if(!C.mind) // NPCs can be choked out twice as fast
-			C.adjustOxyLoss(choke_damage)
+			C.adjustOxyLoss(oxy_damage)
+			total_oxy_damage += oxy_damage
+		log_garrote_choke(user, C, total_oxy_damage) //TA EDIT END
 		C.visible_message(span_danger("[user] [pick("garrotes", "asphyxiates")] [C]!"), \
 		span_userdanger("[user] [pick("garrotes", "asphyxiates")] me!"), span_hear("I hear the sickening sound of cordage!"), COMBAT_MESSAGE_RANGE, user)
 		to_chat(user, span_danger("I [pick("garrote", "asphyxiate")] [C]!"))
 		user.changeNext_move(CLICK_CD_RESIST)	//Stops spam for choking.
-*/			//TA-EDITEND
+			//TA-EDITEND
 /obj/item/clothing/head/inqarticles/blackbag
 	name = "black bag"
 	desc = "A heavily spell-weaved padded sack intended to muffle the cries made within it. Due to the heaviness of the materials involved, application and removal of these is usually difficult for the untrained."
