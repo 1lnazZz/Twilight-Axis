@@ -5446,3 +5446,17 @@ GLOBAL_LIST_EMPTY(loadout_items_by_category)
 	category = list("Оружие", "Донат")
 	donatitem = TRUE
 	donat_tier = 3
+
+/datum/loadout_item/donator/universal/overseer_gold_mask
+	name = "Donator Kit - Golden Confessor Mask - Required: Any Armor Mask"
+	category = list("Броня", "Донат")
+	path = /obj/item/enchantingkit/donator_overseer_gold_mask
+	donatitem = TRUE
+	donat_tier = 2
+
+/datum/loadout_item/donator/universal/overseer_silver_mask
+	name = "Donator Kit - Silver Confessor Mask - Required: Any ArmorMask"
+	category = list("Броня", "Донат")
+	path = /obj/item/enchantingkit/donator_overseer_silver_mask
+	donatitem = TRUE
+	donat_tier = 2
