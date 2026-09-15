@@ -5156,7 +5156,7 @@ GLOBAL_LIST_EMPTY(loadout_items_by_category)
 	donat_tier = 3
 
 /datum/loadout_item/donator/koruu_cadwynhelm_astrata
-	name = "Donator Item - Lux In Tenebris - Required: Astratan Helmet"
+	name = "Donator Item - Lux In Tenebris - Required: Astratan/Astrata Helmet"
 	category = list("Броня", "Донат")
 	path = /obj/item/enchantingkit/donator_koruu_astrataclerichelm
 	donatitem = TRUE
