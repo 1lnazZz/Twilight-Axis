@@ -181,3 +181,13 @@
 
 /obj/item/clothing/suit/roguetown/armor/gambeson/bloodraider/get_examine_highlight_status()
 	return list(EXAMINEHIGHLIGHT_HERESYSEVERITY_ALARMING, HERESYDESC_ZIZO_ARMOR)
+
+/obj/item/clothing/suit/roguetown/armor/gambeson/heavy/inq/overseer
+	name = "confessor shirt"
+	icon = 'modular_twilight_axis/icons/roguetown/clothing/inquisition_overseer/overseer.dmi'
+	mob_overlay_icon = 'modular_twilight_axis/icons/roguetown/clothing/inquisition_overseer/onmob/overseer_onmob.dmi'
+	sleeved = 'modular_twilight_axis/icons/roguetown/clothing/inquisition_overseer/onmob/overseer_onmob.dmi'
+	icon_state = "overseershirt"
+	item_state = "overseershirt"
+	color = null
+	boobed = TRUE
