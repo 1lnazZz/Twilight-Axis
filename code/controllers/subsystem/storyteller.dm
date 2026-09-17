@@ -1522,7 +1522,7 @@ SUBSYSTEM_DEF(gamemode)
 	var/datum/storyteller/preset = active_preset()
 	if(!preset?.guaranteed_hard)
 		return guaranteed_events
-	for(var/datum/round_event_control/event as anything in valid_events)
+	for(var/datum/round_event_control/antagonist/solo/event as anything in valid_events)
 		if(event.occurrences || !event.consumes_hard_antag_slot) // TA EDIT
 			continue
 		if(event.storyteller_antag_flags & STORYTELLER_ANTAG_VILLAIN)
