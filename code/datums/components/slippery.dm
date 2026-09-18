@@ -26,7 +26,7 @@
 	var/actual_chance = slip_chance
 	if(use_stat_modifier && ishuman(victim))
 		var/mob/living/carbon/human/H = victim
-		actual_chance += (20 - H.get_stat(STATKEY_PER) - H.get_stat(STATKEY_SPD)) * 5
+		actual_chance += (20 - H.get_stat(STATKEY_LCK)) * 10
 		actual_chance = clamp(actual_chance, 0, 100)
 	if(!prob(actual_chance))
 		return
