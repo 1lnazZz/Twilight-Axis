@@ -622,8 +622,7 @@
 	minstr = 11
 	max_blade_int = 250
 	smeltresult = /obj/item/ingot/steel
-    special = /datum/special_intent/axe_swing //TA EDIT
-
+    
 /obj/item/rogueweapon/greataxe/blacksteel
 	name = "blacksteel greataxe"
 	desc = "A magnificent greataxe of blacksteel, tipped with spikes to keep the horrors at bay. No one's quite sure as to whether it's meant \
@@ -654,7 +653,6 @@
 	throwforce = 32
 	throw_speed = 3
 	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 33, "embedded_fall_chance" = 2)
-    special = /datum/special_intent/axe_swing //TA EDIT
 
 /obj/item/rogueweapon/greataxe/steel/knight
 	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, /datum/intent/mace/strike)
@@ -756,7 +754,6 @@
 	max_blade_int = 230
 	wdefense = 3
 	minstr = 13
-    special = /datum/special_intent/axe_swing //TA EDIT
 
 /obj/item/rogueweapon/greataxe/steel/doublehead/graggar
 	name = "vicious greataxe"
