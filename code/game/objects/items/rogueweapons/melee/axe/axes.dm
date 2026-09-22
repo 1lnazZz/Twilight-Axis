@@ -600,6 +600,7 @@
 	smeltresult = /obj/item/ingot/iron
 	associated_skill = /datum/skill/combat/axes
 	wdefense = 4
+    special = /datum/special_intent/axe_swing //TA EDIT
 
 /obj/item/rogueweapon/greataxe/getonmobprop(tag)
 	. = ..()
