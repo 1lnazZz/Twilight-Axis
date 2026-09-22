@@ -753,6 +753,7 @@
 	max_blade_int = 230
 	wdefense = 3
 	minstr = 13
+    special = /datum/special_intent/axe_swing
 
 /obj/item/rogueweapon/greataxe/steel/doublehead/graggar
 	name = "vicious greataxe"
